@@ -1,3 +1,5 @@
+//I copied these codes from the internet, but it lacked the author information. If anyone knows about this, please ccontact me. Thank you~
+
 #include <stdio.h>
 #include <math.h>
 #include <float.h>
