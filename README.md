@@ -99,5 +99,3 @@ cd ../T2 ; …
 Finally, check all table.txt in Tx folder.
 
 ls T*/table.txt > table.list ; perl script/collect.pl table.list > table.txt ; cat table.txt
-
-In the paper, we had　also performed this method on the WGS data of ICGC, however, limited by the storage space provided by GitHub, we can not upload the data here.
