@@ -16,7 +16,7 @@ where the *.list files contain the paths of 3 kind of samples separately, the pa
 
 As we preformed 10-fold across validation in the paper, we separated the data files into 10 sample-equal parts
 
-[Note] To get the same results with the paper, we recommend you to skip the step and use the provided files .part instead, as this step involves random factors which would change the results.
+[Note] To get the same results with the paper, we recommend you to skip the step and use the provided *.part* files instead, as this step involves random factors which would change the results.
 
 could be skipped ---begin 
 
@@ -48,7 +48,7 @@ To extract the frequent RDPs of healthy control in T0, we use the tool “tree�
 
 ./tree/tree --input ./T0/HEALTH-BGI.list.txt.train --coverage 0.6 > ./T0/HEALTH-BGI.list.txt.train.half
 
-The parameter 0.6 following the item --coverage claims we want the RDPs with coverage no less then 60%. A lower coverage would take more times, for the 0.6, it took several hours in our computer with Intel® Core™ i5-4590 CPU @ 3.30GHz × 4 . We provided the half.sh containing the commands for all training data. We recommend you to run the commands concurrently with the same number of CUP cores. For a quick validation of this method, please decompress the files *.list.txt.train.half.tar.gz which are pre-computed for T0, and move them into folder T0
+The parameter 0.6 following the item --coverage claims we want the RDPs with coverage no less then 60%. A lower coverage would take more times, for the 0.6, it took several hours in our computer with Intel® Core™ i5-4590 CPU @ 3.30GHz × 4 . We provided the half.sh containing the commands for all training data. We recommend you to run the commands concurrently with the same number of CPU cores. For a quick validation of this method, please decompress the files *.list.txt.train.half.tar.gz which are pre-computed for T0, and move them into folder T0
 
 tar -zxvf HEALTH-BGI.list.txt.train.half.tar.gz ; mv HEALTH-BGI.list.txt.train.half T0 tar -zxvf LIVER-BGI.list.txt.train.half.tar.gz ; mv LIVER-BGI.list.txt.train.half T0 tar -zxvf LUNG-BGI.list.txt.train.half.tar.gz ; mv LUNG-BGI.list.txt.train.half T0
 
