@@ -52,7 +52,7 @@ The parameter 0.6 following the item --coverage claims we want the RDPs with cov
 
 tar -zxvf HEALTH-BGI.list.txt.train.half.tar.gz ; mv HEALTH-BGI.list.txt.train.half T0 tar -zxvf LIVER-BGI.list.txt.train.half.tar.gz ; mv LIVER-BGI.list.txt.train.half T0 tar -zxvf LUNG-BGI.list.txt.train.half.tar.gz ; mv LUNG-BGI.list.txt.train.half T0
 
-Now, let switch into the folder "T0" and continue.
+Now, let's switch into the folder "T0" and continue.
 
 cd T0
 
