@@ -102,6 +102,8 @@ bash score.sh > table.txt
 
 Now, the result of testing data of T0 is stored in table.txt. Switch other Tx folders and repeat those steps.
 
+[Note] Please make sure the script half.sh has been ran and finished at first.
+
 cd ../T1 ; mkdir HEALTH-BGI ; mkdir LIVER-BGI ; mkdir LUNG-BGI ; bash ../T0/fisher.sh ; bash ../T0/balance.sh ; bash ../T0/judge.sh ; bash ../T0/score.sh > table.txt
 cd ../T2 ; …
 
