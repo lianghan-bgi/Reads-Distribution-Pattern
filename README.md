@@ -4,7 +4,7 @@ This tool can be used to extract genome-wide reads distribution pattern through 
 
 --- Preparation ---
 
-As we developed our method based on the reads count of a series of windows on the reference, it’s required that we prepared these data before extracting operations. Here, we recommend a tool readCount (https://github.com/genome/bam-readcount) to finish this work.
+As we developed our method based on the reads count of a series of windows on the reference, it’s required that we prepared these data before extracting operations. Here, we recommend a tool readCount (https://github.com/broadinstitute/ichorCNA/wiki/Usage) to finish this work.
 
 For human cfDNA data, we set the window length as 10K, an empire value.
 
