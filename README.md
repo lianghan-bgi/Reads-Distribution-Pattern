@@ -2,7 +2,7 @@
 
 This tool can be used to extract genome-wide reads distribution pattern through whole genome sequencing to classify samples.
 
---- Preparation ---
+# --- Preparation ---
 
 As we developed our method based on the reads count of a series of windows on the reference, it’s required that we prepared these data before extracting operations. Here, we recommend a tool readCount (https://github.com/broadinstitute/ichorCNA/wiki/Usage) to finish this work.
 
@@ -60,10 +60,10 @@ tar -zxvf LIVER-BGI.list.txt.train.half.tar.gz ; mv LIVER-BGI.list.txt.train.hal
 tar -zxvf LUNG-BGI.list.txt.train.half.tar.gz ; mv LUNG-BGI.list.txt.train.half T0
 ```
 Now, let's switch into the folder "T0" and continue.
-
+```
 cd T0
-
---- Find out type-special RDPs and verification ---
+```
+# --- Find out type-special RDPs and verification ---
 
 We used the tool “fisher” to measure how special an RDP is for one kind of samples comparing to another kind. For example, for liver cancer comparing to healthy control
 ```
