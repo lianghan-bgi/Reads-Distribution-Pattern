@@ -32,7 +32,7 @@ The script randM.pl separates a file in to the given number parts with equal lin
 
 We produced the 10 pairs of training and testing data with the part files. We created 10 folders T0~T9 to put those files.
 ```
-perl -lne ‘for($a=0;$a<10;$a++){mkdir T$a}’
+perl -lne 'for($a=0;$a<10;$a++){mkdir T$a}'
 ```
 In T0, we copied the HEALTH.list.txt.part0 as the testing data of the healthy control and combined the rest HEALTH.list.txt.part1~ HEALTH.list.txt.part8 files as the training data.
 ```
