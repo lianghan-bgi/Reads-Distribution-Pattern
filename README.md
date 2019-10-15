@@ -19,25 +19,25 @@ As we preformed 10-fold across validation in the paper, we separated the data fi
 [Note] To get the same results with the paper, we recommend you to skip the step and use the provided *.part* files instead, as this step involves random factors which would change the results.
 
 could be skipped ---begin 
-
+```
 perl ./script/randM.pl HEALTH-BGI.list.txt 10 ; perl ./script/randM.pl LIVER-BGI.list.txt 10 ; perl ./script/randM.pl LUNG-BGI.list.txt 10
-
+```
 could be skipped ---end
 
 The script randM.pl separates a file in to the given number parts with equal lines randomly (or almost equal lines if the lines can’t be separated on average). After this step, we will obtain series files with postfix of “part*”.
 
 We produced the 10 pairs of training and testing data with the part files. We created 10 folders T0~T9 to put those files.
-
+```
 perl -lne ‘for($a=0;$a<10;$a++){mkdir T$a}’
-
+```
 In T0, we copied the HEALTH.list.txt.part0 as the testing data of the healthy control and combined the rest HEALTH.list.txt.part1~ HEALTH.list.txt.part8 files as the training data.
 
 cat HEALTH-BGI.list.txt.part0 > T0/HEALTH-BGI.list.txt.test ; cat HEALTH-BGI.list.txt.part1 HEALTH-BGI.list.txt.part2 HEALTH-BGI.list.txt.part3 HEALTH-BGI.list.txt.part4 HEALTH-BGI.list.txt.part5 HEALTH-BGI.list.txt.part6 HEALTH-BGI.list.txt.part7 HEALTH-BGI.list.txt.part8 HEALTH-BGI.list.txt.part9 > T0/HEALTH-BGI.list.txt.train
 
 We then repeat this step for other Tx folders and sample kinds. The following command could finish these steps faster.
-
+```
 ls *.list.txt | perl -lne 'BEGIN{$fold=10}$file=$_;for($a=0;$a<$fold;$a++){print "cat $file.part$a > T$a/$file.test";$s="";for($b=0;$b<$fold;$b++){$s.=" $file.part$b" if($a!=$b)}print "cat$s > T$a/$file.train"}' | bash
-
+```
 Now, please switch into the folder “tree” and compile the tools.
 
 cd tree ; bash make.sh ; cd ..
