@@ -2,7 +2,7 @@
 
 This tool can be used to extract genome-wide reads distribution pattern through whole genome sequencing to classify samples.
 
-# --- Preparation ---
+# Preparation
 
 As we developed our method based on the reads count of a series of windows on the reference, it’s required that we prepared these data before extracting operations. Here, we recommend a tool readCount (https://github.com/broadinstitute/ichorCNA/wiki/Usage) to finish this work.
 
@@ -18,7 +18,7 @@ where the *.list files contain the paths of 3 kind of samples separately, the pa
 
 As we preformed 10-fold across validation in the paper, we separated the data files into 10 sample-equal parts
 
-[Note] To get the same results with the paper, we recommend you to skip the step and use the provided *.part* files instead, as this step involves random factors which would change the results.
+### [Note] To get the same results with the paper, we recommend you to skip the step and use the provided *.part* files instead, as this step involves random factors which would change the results. ###
 
 could be skipped ---begin 
 ```
@@ -47,7 +47,7 @@ Now, please switch into the folder “tree” and compile the tools.
 ```
 cd tree ; bash make.sh ; cd ..
 ```
---- Extract the frequent reads distribution patterns (RDPs)---
+# Extract the frequent reads distribution patterns (RDPs)
 
 To extract the frequent RDPs of healthy control in T0, we use the tool “tree” in the folder “tree”
 ```
@@ -63,7 +63,7 @@ Now, let's switch into the folder "T0" and continue.
 ```
 cd T0
 ```
-# --- Find out type-special RDPs and verification ---
+# Find out type-special RDPs and verification
 
 We used the tool “fisher” to measure how special an RDP is for one kind of samples comparing to another kind. For example, for liver cancer comparing to healthy control
 ```
@@ -100,7 +100,7 @@ bash score.sh > table.txt
 ```
 Now, the result of testing data of T0 is stored in table.txt. Switch other Tx folders and repeat those steps.
 
-[Note] Please make sure the script half.sh has been ran and finished at first.
+### [Note] Please make sure the script half.sh has been ran and finished at first. ###
 ```
 cd ../T1
 mkdir HEALTH-BGI
