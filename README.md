@@ -9,9 +9,11 @@ As we developed our method based on the reads count of a series of windows on th
 For human cfDNA data, we set the window length as 10K, an empire value.
 
 In this repository, we prepared the reads count data of 30 cfDNA samples (10 healthy controls with prefix of “healthy”, 10 liver cancer samples with prefix of “liver” and 10 lung cancer samples with prefix of “lung” in the readCount folder) with fix-window-length of 1K. We then use the script “data.pl” in folder “script” to arrange them in advance.
-
-perl ./script/data.pl HEALTH-BGI.list 10 > HEALTH-BGI.list.txt ; perl ./script/data.pl LIVER-BGI.list 10 > LIVER-BGI.list.txt ; perl ./script/data.pl LUNG-BGI.list 10 > LUNG-BGI.list.txt
-
+```
+perl ./script/data.pl HEALTH-BGI.list 10 > HEALTH-BGI.list.txt
+perl ./script/data.pl LIVER-BGI.list 10 > LIVER-BGI.list.txt
+perl ./script/data.pl LUNG-BGI.list 10 > LUNG-BGI.list.txt
+```
 where the *.list files contain the paths of 3 kind of samples separately, the parameter 10 means to fuse 10 reads counts of 1K-length window to obtain that of 10K-length of window. After this step, we obtained 3 data files with reads counts of 10K-length window. Each line in the data file represents a sample and each data file corresponds to a single kind of samples.
 
 As we preformed 10-fold across validation in the paper, we separated the data files into 10 sample-equal parts
@@ -20,7 +22,9 @@ As we preformed 10-fold across validation in the paper, we separated the data fi
 
 could be skipped ---begin 
 ```
-perl ./script/randM.pl HEALTH-BGI.list.txt 10 ; perl ./script/randM.pl LIVER-BGI.list.txt 10 ; perl ./script/randM.pl LUNG-BGI.list.txt 10
+perl ./script/randM.pl HEALTH-BGI.list.txt 10
+perl ./script/randM.pl LIVER-BGI.list.txt 10
+perl ./script/randM.pl LUNG-BGI.list.txt 10
 ```
 could be skipped ---end
 
