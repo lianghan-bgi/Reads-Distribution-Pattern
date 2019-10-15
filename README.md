@@ -18,7 +18,7 @@ where the *.list files contain the paths of 3 kind of samples separately, the pa
 
 As we preformed 10-fold across validation in the paper, we separated the data files into 10 sample-equal parts
 
-### [Note] To get the same results with the paper, we recommend you to skip the step and use the provided *.part* files instead, as this step involves random factors which would change the results. ###
+***Note*** To get the same results with the paper, we recommend you to skip the step and use the provided *.part* files instead, as this step involves random factors which would change the results.
 
 could be skipped ---begin 
 ```
@@ -100,7 +100,7 @@ bash score.sh > table.txt
 ```
 Now, the result of testing data of T0 is stored in table.txt. Switch other Tx folders and repeat those steps.
 
-### [Note] Please make sure the script half.sh has been ran and finished at first. ###
+***Note*** Please make sure the script half.sh has been ran and finished at first.
 ```
 cd ../T1
 mkdir HEALTH-BGI
