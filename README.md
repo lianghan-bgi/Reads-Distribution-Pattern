@@ -22,13 +22,13 @@ As we preformed 10-fold across validation in the paper, we separated the data fi
 
 could be skipped ---begin 
 ```
-perl ./script/randM.pl HEALTH-BGI.list.txt 10
-perl ./script/randM.pl LIVER-BGI.list.txt 10
-perl ./script/randM.pl LUNG-BGI.list.txt 10
+perl ./script/randC.pl HEALTH-BGI.list.txt 10
+perl ./script/randC.pl LIVER-BGI.list.txt 10
+perl ./script/randC.pl LUNG-BGI.list.txt 10
 ```
 could be skipped ---end
 
-The script randM.pl separates a file in to the given number parts with equal lines randomly (or almost equal lines if the lines can’t be separated on average). After this step, we will obtain series files with postfix of “part*”.
+The script randC.pl separates a file in to the given number parts with equal lines randomly (or almost equal lines if the lines can’t be separated on average). After this step, we will obtain series files with postfix of “part*”.
 
 We produced the 10 pairs of training and testing data with the part files. We created 10 folders T0~T9 to put those files.
 ```
